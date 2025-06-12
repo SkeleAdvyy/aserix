@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aserix's HOME</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #1e1e1e;
+      --bg-light: #2c2c2c;
+      --text: #ffffff;
+      --muted: #bbbbbb;
+      --radius: 999px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--bg-light);
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border-radius: var(--radius);
+      max-width: 800px;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius);
+    }
+
+    header a:hover {
+      background: var(--bg-dark);
+      color: var(--text);
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 0 1rem;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 1rem auto 0 auto;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--radius);
+      background-color: var(--bg-light);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .buttons a:hover {
+      background-color: var(--bg-dark);
+      transform: scale(1.05);
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+
+body {
+  background-image: url('https://i.ibb.co/sJV9ZbY3/image-40.png');
+  background-repeat: repeat-x;
+  background-size: cover;
+  animation: moveBackground 60s linear infinite;
+  background-position: 0 0;
+  background-color: #1e1e1e;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 7000px 0;
+  }
+}
+
+.showcase {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: #1e1e1e;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.info-card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+}
+
+.info-card p {
+  color: white;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.founder-section {
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.founder-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.discord-profile {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px Srgba(0,0,0,0.4);
+  gap: 1rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.profile-info p {
+  margin: 0.2rem 0 0;
+  color: #43b581; 
+}
+
+.founder-description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+@media(min-width: 768px) {
+  .founder-content {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .founder-description {
+    text-align: left;
+  }
+}
+
+
+.social-buttons {
+  text-align: center;
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 999px;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 2px solid transparent;
+}
+
+.pill-btn i {
+  font-size: 1.2rem;
+}
+
+.pill-btn:hover,
+.pill-btn:focus {
+  background-color: #00000000;
+  border-color: #000000;
+  transform: scale(1.05);
+}
+
+.pill-btn .fa-tiktok { color: #ffffff; }
+.pill-btn .fa-youtube { color: #ff4a4a; }
+.pill-btn .fa-discord { color: #1e78ff; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#">Home</a>
+    <a href="#">Ko-fi</a>
+    <a href="https://discord.gg/FUHNAM442R" target="_blank" rel="noopener noreferrer">Discord</a>
+  </header>
+
+  <section class="hero">
+    <h1>Aserix's HOME</h1>
+    <img src="https://i.ibb.co/KctChj2s/image-37-removebg-preview.png" alt="Aserix profile" />
+    <p>Benvenuto nel nostro Sito! Una casa accogliente per divertirsi, condividere e restare in contatto con la community.</p>
+  </section>
+
+
+<section class="showcase hero">
+  <h2 class="section-title">Cosa Offriamo?</h2>
+  <div class="card-grid">
+    <div class="info-card">
+      <img src="https://i.ibb.co/4gCN0pDg/images-removebg-preview.png" alt="Simpatiaahahaha" />
+      <p>Siamo Simpatici</p>
+    </div>
+    <div class="info-card">
+      <img src="https://i.ibb.co/LXNGTRz5/5-A6163-B0-602-E-4-E01-B8-A5-C3-D66-FD3058-A-removebg-preview.png" alt="attranetihahahaah" />
+      <p>Siamo Attraenti</p>
+    </div>
+    <div class="info-card">
+      <img src="https://i.ibb.co/fG2DjnMj/emoji-con-la-faccia-che-piange-forte-1303870-1261-removebg-preview.png" alt="disperattiiahah" />
+      <p>Siamo disperatamente in cerca di membri</p>
+    </div>
+  </div>
+</section>
+
+<section class="founder-section">
+  <h2>ASERIX</h2>
+
+  <div class="founder-content">
+    <div class="founder-image">
+      <img src="https://i.ibb.co/TxDbSsm6/image-removebg-preview-20.png" alt="Founder del Server">
+    </div>
+    <div class="founder-description">
+      <h3>@aserix_i77</h3>
+      <p>
+       Un uomo cambia pantaloni perché ha un buco nella tasca Un uomo furbo invece ne approfitta per grattarsi le palle  😙𓂸 Я трахну тебя в зад
+      </p>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<section class="social-buttons">
+  <a href="https://www.tiktok.com/@aserix_i77thebest" class="pill-btn" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+  <a href="https://youtube.com/@aserix_i77thebestofall?si=2uLZpSugx00u_lBG" class="pill-btn" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-youtube"></i> Youtube
+  </a>
+  <a href="ttps://discord.gg/FUHNAM442R" class="pill-btn" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-discord"></i> Discord
+  </a>
+</section>
+
+
+  <footer>
+    &copy; 2025 Aserix's HOME. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>
