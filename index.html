@@ -400,7 +400,7 @@ body {
 <script>
  const counterElement = document.getElementById('visitor-counter');
 
-  fetch('https://api.countapi.dev/hit/aserixshome.com/visits')
+  fetch('https://api.countapi.dev/hit/aserixshome/visits')
     .then(res => res.json())
     .then(data => {
       counterElement.textContent = `Visitatori: ${data.value}`;
