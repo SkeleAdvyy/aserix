@@ -398,15 +398,15 @@ body {
   <footer>
     &copy; 2025 Aserix's HOME. Tutti i diritti riservati.
 <script>
-  const counterElement = document.getElementById('visitor-counter');
+ const counterElement = document.getElementById('visitor-counter');
 
-  fetch('https://api.countapi.xyz/hit/aserixshome/visits')
-    .then(response => response.json())
+  fetch('https://api.countapi.dev/hit/aserixshome.com/visits')
+    .then(res => res.json())
     .then(data => {
       counterElement.textContent = `Visitatori: ${data.value}`;
     })
-    .catch(error => {
-      console.error('Errore nel caricamento del contatore:', error);
+    .catch(err => {
+      console.error('Errore nel caricamento del contatore:', err);
       counterElement.textContent = 'Visitatori: N/A';
     });
 </script>
