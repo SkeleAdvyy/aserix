@@ -300,9 +300,38 @@ body {
 .pill-btn .fa-youtube { color: #ff4a4a; }
 .pill-btn .fa-discord { color: #1e78ff; }
 
+#visitor-counter-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#visitor-counter {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  background-color: var(--bg-light);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+#visitor-counter:hover {
+  background-color: var(--bg-dark);
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
+
+<div id="visitor-counter-container">
+  <a id="visitor-counter" href="#">Visitatori: ...</a>
+</div>
 
   <header>
     <a href="#">Home</a>
@@ -368,6 +397,19 @@ body {
 
   <footer>
     &copy; 2025 Aserix's HOME. Tutti i diritti riservati.
+<script>
+  const counterElement = document.getElementById('visitor-counter');
+
+  fetch('https://api.countapi.xyz/hit/aserixshome/visits')
+    .then(response => response.json())
+    .then(data => {
+      counterElement.textContent = `Visitatori: ${data.value}`;
+    })
+    .catch(error => {
+      console.error('Errore nel caricamento del contatore:', error);
+      counterElement.textContent = 'Visitatori: N/A';
+    });
+</script>
   </footer>
 </body>
 </html>
