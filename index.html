@@ -82,6 +82,8 @@
       color: var(--muted);
       max-width: 600px;
       margin: 1rem auto 0 auto;
+      min-height: 1.5em; 
+      transition: opacity 0.5s ease;
     }
 
     .buttons {
@@ -134,196 +136,237 @@
       color: var(--muted);
     }
 
-body {
-  background-image: url('https://i.ibb.co/sJV9ZbY3/image-40.png');
-  background-repeat: repeat-x;
-  background-size: cover;
-  animation: moveBackground 60s linear infinite;
-  background-position: 0 0;
-  background-color: #1e1e1e;
-}
+    body {
+      background-image: url('https://i.ibb.co/sJV9ZbY3/image-40.png');
+      background-repeat: repeat-x;
+      background-size: cover;
+      animation: moveBackground 60s linear infinite;
+      background-position: 0 0;
+      background-color: #1e1e1e;
+    }
 
-@keyframes moveBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 7000px 0;
-  }
-}
+    @keyframes moveBackground {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 7000px 0;
+      }
+    }
 
-.showcase {
-  margin-top: 5rem;
-  text-align: center;
-}
+    .showcase {
+      margin-top: 5rem;
+      text-align: center;
+    }
 
-.section-title {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 2rem;
-}
+    .section-title {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
 
-.card-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+    .card-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
 
-.info-card {
-  background: #1e1e1e;
-  border-radius: 20px;
-  padding: 1rem;
-  width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
+    .info-card {
+      background: #1e1e1e;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
 
-.info-card img {
-  width: 100%;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
-}
+    .info-card img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
 
-.info-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
-}
+    .info-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+    }
 
-.info-card p {
-  color: white;
-  font-weight: 500;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
+    .info-card p {
+      color: white;
+      font-weight: 500;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
 
-.founder-section {
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
+    .founder-section {
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
 
-.founder-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
+    .founder-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
 
-.founder-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
+    .founder-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
 
-.discord-profile {
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 15px Srgba(0,0,0,0.4);
-  gap: 1rem;
-}
+    .discord-profile {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px Srgba(0,0,0,0.4);
+      gap: 1rem;
+    }
 
-.profile-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-.profile-info h3 {
-  margin: 0;
-  font-size: 1.3rem;
-}
+    .profile-info h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
 
-.profile-info p {
-  margin: 0.2rem 0 0;
-  color: #43b581; 
-}
+    .profile-info p {
+      margin: 0.2rem 0 0;
+      color: #e76b18; 
+    }
 
-.founder-description {
-  max-width: 600px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+    .founder-description {
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
 
+    @media(min-width: 768px) {
+      .founder-content {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+      }
 
-@media(min-width: 768px) {
-  .founder-content {
-    flex-direction: row;
-    justify-content: center;
-    text-align: left;
-  }
+      .founder-description {
+        text-align: left;
+      }
+    }
 
-  .founder-description {
-    text-align: left;
-  }
-}
+    .social-buttons {
+      text-align: center;
+      margin: 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
 
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 999px;
+      transition: background-color 0.3s, transform 0.3s;
+      border: 2px solid transparent;
+    }
 
-.social-buttons {
-  text-align: center;
-  margin: 3rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
+    .pill-btn i {
+      font-size: 1.2rem;
+    }
 
-.pill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 999px;
-  transition: background-color 0.3s, transform 0.3s;
-  border: 2px solid transparent;
-}
+    .pill-btn:hover,
+    .pill-btn:focus {
+      background-color: #00000000;
+      border-color: #000000;
+      transform: scale(1.05);
+    }
 
-.pill-btn i {
-  font-size: 1.2rem;
-}
+    .pill-btn .fa-tiktok { color: #ffffff; }
+    .pill-btn .fa-youtube { color: #ff4a4a; }
+    .pill-btn .fa-discord { color: #1e78ff; }
 
-.pill-btn:hover,
-.pill-btn:focus {
-  background-color: #00000000;
-  border-color: #000000;
-  transform: scale(1.05);
-}
+    #visitor-counter-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
 
-.pill-btn .fa-tiktok { color: #ffffff; }
-.pill-btn .fa-youtube { color: #ff4a4a; }
-.pill-btn .fa-discord { color: #1e78ff; }
+    #visitor-counter {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      background-color: var(--bg-light);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+    }
 
-#visitor-counter-container {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-}
+    #visitor-counter:hover {
+      background-color: var(--bg-dark);
+      transform: scale(1.05);
+    }
 
-#visitor-counter {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius);
-  background-color: var(--bg-light);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-}
+    .events-section {
+      max-width: 800px;
+      margin: 5rem auto;
+      background: var(--bg-light);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: white;
+      animation: fadeIn 1s ease forwards;
+    }
 
-#visitor-counter:hover {
-  background-color: var(--bg-dark);
-  transform: scale(1.05);
-}
+    .events-section h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .event-item {
+      background: var(--bg-dark);
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .event-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+    }
+
+    .event-date {
+      font-weight: 700;
+      color: #ffcc3f;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-desc {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
 
   </style>
 </head>
@@ -333,18 +376,17 @@ body {
   <a id="visitor-counter" href="#">Visitatori: ...</a>
 </div>
 
-  <header>
-    <a href="#">Home</a>
-    <a href="#">Ko-fi</a>
-    <a href="https://discord.gg/FUHNAM442R" target="_blank" rel="noopener noreferrer">Discord</a>
-  </header>
+<header>
+  <a href="#">Home</a>
+  <a href="#">Ko-fi</a>
+  <a href="https://discord.gg/FUHNAM442R" target="_blank" rel="noopener noreferrer">Discord</a>
+</header>
 
-  <section class="hero">
-    <h1>Aserix's HOME</h1>
-    <img src="https://i.ibb.co/KctChj2s/image-37-removebg-preview.png" alt="Aserix profile" />
-    <p>Benvenuto nel nostro Sito! Una casa accogliente per divertirsi, condividere e restare in contatto con la community.</p>
-  </section>
-
+<section class="hero">
+  <h1>Aserix's HOME</h1>
+  <img src="https://i.ibb.co/KctChj2s/image-37-removebg-preview.png" alt="Aserix profile" />
+  <p id="welcome-text">Benvenuto nel nostro Sito! Una casa accogliente per divertirsi, condividere e restare in contatto con la community.</p>
+</section>
 
 <section class="showcase hero">
   <h2 class="section-title">Cosa Offriamo?</h2>
@@ -380,6 +422,22 @@ body {
   </div>
 </section>
 
+<section class="events-section">
+  <h2>Eventi e Novità</h2>
+  <div class="event-item">
+    <div class="event-date">15/06/2025</div>
+    <div class="event-desc">Nuovo Admin nel server discord</div>
+  </div>
+  <div class="event-item">
+    <div class="event-date">15/06/2025</div>
+    <div class="event-desc">Creazione in corso di un server minecraft</div>
+  </div>
+  <div class="event-item">
+    <div class="event-date">15/06/2025</div>
+    <div class="event-desc">Giveaway di 100 robux con estrazione del vincitore in 3 giorni (robux forniti da st4rxz._)</div>
+  </div>
+</section>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <section class="social-buttons">
@@ -389,27 +447,45 @@ body {
   <a href="https://youtube.com/@aserix_i77thebestofall?si=2uLZpSugx00u_lBG" class="pill-btn" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-youtube"></i> Youtube
   </a>
-  <a href="ttps://discord.gg/FUHNAM442R" class="pill-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://discord.gg/FUHNAM442R" class="pill-btn" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-discord"></i> Discord
   </a>
 </section>
 
-
-  <footer>
-    &copy; 2025 Aserix's HOME. Tutti i diritti riservati.
+<footer>
+  &copy; 2025 Aserix's HOME. Tutti i diritti riservati.
 <script>
- const counterElement = document.getElementById('visitor-counter');
+  const counterElement = document.getElementById('visitor-counter');
 
-  fetch('https://api.countapi.dev/hit/aserixshome/visits')
-    .then(res => res.json())
+  fetch('https://api.countapi.xyz/hit/aserixshome/visits')
+    .then(response => response.json())
     .then(data => {
       counterElement.textContent = `Visitatori: ${data.value}`;
     })
-    .catch(err => {
-      console.error('Errore nel caricamento del contatore:', err);
+    .catch(error => {
+      console.error('Errore nel caricamento del contatore:', error);
       counterElement.textContent = 'Visitatori: N/A';
     });
+
+  const welcomeTexts = [
+    "Benvenuto nel nostro Sito! Una casa accogliente per divertirsi, condividere e restare in contatto con la community.",
+    "Scopri tutte le novità e unisciti alla nostra fantastica community!",
+    "Divertimento e amicizia ti aspettano qui su Aserix's HOME.",
+    "Entra nel mondo di Aserix, dove ogni giorno è una nuova avventura!"
+  ];
+
+  const welcomeElement = document.getElementById('welcome-text');
+  let index = 0;
+
+  setInterval(() => {
+    welcomeElement.style.opacity = 0;
+    setTimeout(() => {
+      index = (index + 1) % welcomeTexts.length;
+      welcomeElement.textContent = welcomeTexts[index];
+      welcomeElement.style.opacity = 1;
+    }, 500);
+  }, 8000);
 </script>
-  </footer>
+</footer>
 </body>
 </html>
